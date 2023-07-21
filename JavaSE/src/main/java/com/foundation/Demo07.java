@@ -1,4 +1,4 @@
-package com;
+package com.foundation;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -20,6 +20,8 @@ public class Demo07 {
         int[] luckNumbers = createLuckNumbers();
 
         printArry(luckNumbers);
+
+        judge(userNumbers,luckNumbers);
     }
 
 //    设计一个方法让用户投注一组号码并返回
@@ -97,6 +99,45 @@ public class Demo07 {
         }
         numbers[6] = random.nextInt(16) + 1;
         return numbers;
+    }
+
+//    设计一个方法判断用户中奖情况
+    public static void judge(int[] userNambers , int[] luckNumbers){
+
+        int redCount = 0;
+        int blueCount = 0;
+
+        for (int i = 0; i < userNambers.length; i++) {
+
+            for (int j = 0; j < luckNumbers.length; j++) {
+
+                if(userNambers[i] == luckNumbers[j]){
+                    redCount++;
+                    break;
+                }
+
+            }
+
+        }
+        blueCount = userNambers[6] == luckNumbers[6] ?  1  : 0 ;
+        System.out.println("您命中红球的数量：" + redCount);
+        System.out.println("您命中蓝球的数量：" + blueCount);
+
+        if(redCount == 6 && blueCount == 1){
+            System.out.println("恭喜您，中奖1000万");
+        }else if (redCount == 6 && blueCount == 0){
+            System.out.println("恭喜您，中奖500万");
+        }else if (redCount == 5 && blueCount == 1){
+            System.out.println("恭喜您，中奖3000元");
+        }else if (redCount == 5 && blueCount == 0 || redCount == 4 && blueCount == 1){
+            System.out.println("恭喜您，中奖200元");
+        }else if (redCount == 4 && blueCount == 0 || redCount == 3 && blueCount == 1){
+            System.out.println("恭喜您，中奖10元");
+        }else if (redCount < 3  && blueCount == 1){
+            System.out.println("恭喜您，中奖5元");
+        }else {
+            System.out.println("感谢您对福利事业做出巨大贡献~~~");
+        }
     }
 
 }

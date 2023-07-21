@@ -1,4 +1,4 @@
-package com;
+package com.foundation;
 
 /**
  * @BelongsProject: JavaSE
@@ -8,26 +8,28 @@ package com;
  * @Description: 找素数
  */
 
-public class Demo06_2 {
+public class Demo06 {
     public static void main(String[] args) {
-        search(101,200);
+        System.out.println(search(101,200));
     }
-    public static void search(int start , int end){
+    public static int search(int start , int end){
         int count = 0;
-
-        OUT:  //外部循环指定标签
         for (int i=start; i <= end; i++){
 
             boolean flag = true;
             for (int j=2; j <= i / 2; j++ ){
                 if (i % j == 0){
-                    continue OUT;
+                    flag = false;
+                    break;
                 }
+
             }
-            count++;
-            System.out.println(i);
+            if (flag){
+                System.out.println(i);
+                count++;
+            }
         }
-        System.out.println(count);
+        return count;
     }
 }
 
