@@ -6,7 +6,7 @@ public class Outer {
     // 成员内部类
     public class Inner{
         private String name;
-        public static String schoolName; // JDK 16开始才支持定义静态成员的
+        //public static String schoolName; // JDK 16开始才支持定义静态成员的
         private int age = 88;
 
         public void test(){

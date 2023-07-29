@@ -16,6 +16,7 @@ public class Test1 {
         System.out.println(s);
 
         // 2、反转操作
+        System.out.println("-----------反转操作----------");
         s.reverse();
         System.out.println(s);
 

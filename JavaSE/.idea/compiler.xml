@@ -7,13 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="OOP-App2" />
         <module name="OOP" />
+        <module name="DoctorSystem" />
+        <module name="api-app" />
+        <module name="OOP-App4" />
+        <module name="OOP-App2" />
         <module name="OOP-App3" />
         <module name="OOP-App1" />
         <module name="ATMSystem" />
-        <module name="api-app" />
+        <module name="Algorithm" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="OOP-api" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

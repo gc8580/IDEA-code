@@ -14,6 +14,9 @@
         <module>OOP-App1</module>
         <module>OOP-App2</module>
         <module>OOP-App3</module>
+        <module>OOP-App4</module>
+        <module>DoctorSystem</module>
+        <module>Algorithm</module>
     </modules>
 
     <properties>
